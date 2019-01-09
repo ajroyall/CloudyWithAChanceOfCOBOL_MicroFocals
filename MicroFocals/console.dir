@@ -1,0 +1,9 @@
+noverbose
+noconfirm
+nologo
+anim
+
+case
+warnings"2"
+constant console-mode(1)
+constant use-sql(1)

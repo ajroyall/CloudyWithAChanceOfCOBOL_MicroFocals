@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AzureFunctionsVersion>v1</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetOneStore\GetOneStore.cblproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MicroFocus.COBOL.FHRedir">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\MicroFocus.COBOL.FHRedir\v4.0_4.0.0.0__0412c5e0b2aaa8f0\MicroFocus.COBOL.FHRedir.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.FileHandler">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\MicroFocus.COBOL.FileHandler\v4.0_4.0.0.0__0412c5e0b2aaa8f0\MicroFocus.COBOL.FileHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.Runtime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\Azure\v2.9\MicroFocus.COBOL.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.Runtime.Azure">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\Azure\v2.9\MicroFocus.COBOL.Runtime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.RuntimeServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\MicroFocus.COBOL.RuntimeServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

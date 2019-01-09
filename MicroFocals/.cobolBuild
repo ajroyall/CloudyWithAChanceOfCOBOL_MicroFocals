@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MicroFocals" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
+	<typedef name="mffilelist" classname="com.microfocus.ant.TypeFileList"/>
+	<typedef name="mfdirlist" classname="com.microfocus.ant.TypeDirectiveList"/>
+	<typedef name="mfdestfilelist" classname="com.microfocus.ant.TypeDestinationFileList"/>
+	<taskdef name="cobol" classname="com.microfocus.ant.TaskCobol"/>
+	<taskdef name="cobolclean" classname="com.microfocus.ant.TaskCobolClean"/>
+	<taskdef name="cobollink" classname="com.microfocus.ant.TaskCobolLink"/>
+	<taskdef uri="antlib:net.sf.antcontrib" resource="net/sf/antcontrib/antlib.xml" classpath="lib/ant-contrib-1.0b3.jar"/>
+	<!--  ***********************************  -->
+	<!--  * General property initialisation *  -->
+	<!--  ***********************************  -->
+	<property environment="env"/>
+	<property name="MicroFocals" value="${basedir}"/>
+	<property name="cfg" value="New_Configuration"/>
+	<property name="cfgtarget" value="cfg.${cfg}"/>
+	<property name="forceCompile" value="true"/>
+	<property name="pathVar.PROJECT_LOC" value="${env.PROJECT_LOC}"/>
+	<property name="pathVar.WORKSPACE_LOC" value="${env.WORKSPACE_LOC}"/>
+	<property name="pathVar.ECLIPSE_HOME" value="${env.ECLIPSE_HOME}"/>
+	<property name="pathVar.PARENT_LOC" value="${env.PARENT_LOC}"/>
+	<property name="failOnError" value="false"/>
+	<property name="cobolFailOnError" value="true"/>
+	<property name="cobollinkFailOnError" value="${failOnError}"/>
+	<!--  ******************************  -->
+	<!--  * OS-specific initialisation *  -->
+	<!--  ******************************  -->
+	<condition property="windows">
+		<os family="windows"/>
+	</condition>
+	<condition property="unix">
+		<os family="unix"/>
+	</condition>
+	<ac:if>
+		<isset property="windows"/>
+		<then>
+			<property name="dllext" value=".dll"/>
+			<property name="exeext" value=".exe"/>
+			<property name="objext" value=".obj"/>
+			<property name="equalsInDir" value="="/>
+			<property name="pathVar.pS" value=";"/>
+			<property name="shell" value="cmd"/>
+			<property name="shell.ext" value=".bat"/>
+			<property name="shell.arg" value="/c"/>
+			<property name="script.header" value="@rem MS-DOS Batch File"/>
+		</then>
+	</ac:if>
+	<ac:if>
+		<isset property="unix"/>
+		<then>
+			<property name="dllext" value=".so"/>
+			<property name="exeext" value=""/>
+			<property name="objext" value=".o"/>
+			<property name="equalsInDir" value="="/>
+			<property name="pathVar.pS" value=":"/>
+			<property name="shell" value="sh"/>
+			<property name="shell.ext" value=".sh"/>
+			<property name="shell.arg" value="-c"/>
+			<property name="script.header" value="#!/bin/sh"/>
+		</then>
+	</ac:if>
+	<!--  *****************************  -->
+	<!--  * COBOL compiler directives *  -->
+	<!--  *****************************  -->
+	<!-- cobol_directive_set_1 -->
+	<mfdirlist id="cobol_directive_set_1">
+		<directive name="DIALECT" value="MF"/>
+		<directive name="COPYEXT" value="cpy,cbl"/>
+		<directive name="WARNING" value="1"/>
+		<directive name="CHARSET" value="ASCII"/>
+		<directive name="MAX-ERROR" value="100"/>
+		<directive name="SOURCEFORMAT" value="fixed"/>
+		<directive name="SQL"/>
+		<directive name="SQL" value="DBMAN${equalsInDir}ODBC"/>
+		<directives value=""/>
+		<directive name="SOURCETABSTOP" value="4"/>
+		<directives value="use&quot;console.dir&quot;"/>
+	</mfdirlist>
+	<!--  **********************  -->
+	<!--  * COBOL source files *  -->
+	<!--  **********************  -->
+	<!-- cobol_file_set_1 -->
+	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
+		<file name="ABC4400.cbl"/>
+		<file name="autosetup.cbl"/>
+		<file name="centertext.cbl"/>
+		<file name="constmenu.cbl"/>
+		<file name="consultantsadd.cbl"/>
+		<file name="consultpopup.cbl"/>
+		<file name="consultsum.cbl"/>
+		<file name="custmaint.cbl"/>
+		<file name="custmenu.cbl"/>
+		<file name="custpopup.cbl"/>
+		<file name="dateinfo.cbl"/>
+		<file name="errpopup.cbl"/>
+		<file name="exceptions.cbl"/>
+		<file name="gencustid.cbl"/>
+		<file name="geohashenc.cbl"/>
+		<file name="getconsults.cbl"/>
+		<file name="getdefstore.cbl"/>
+		<file name="getonestore.cbl"/>
+		<file name="gettimeslot.cbl"/>
+		<file name="mfocal.cbl"/>
+		<file name="mfocalhelp.cbl"/>
+		<file name="schedread.cbl"/>
+		<file name="scheduleapp.cbl"/>
+		<file name="setadismode.cbl"/>
+		<file name="setstore.cbl"/>
+		<file name="storemaintenance.cbl"/>
+		<file name="storepopup.cbl"/>
+		<file name="valdate.cbl"/>
+		<file name="valdated.cbl"/>
+	</mffilelist>
+	<!-- COBOL copybook locations -->
+	<mffilelist id="cobol.copybook.locations">
+		<path type="copybook" name="${MicroFocals}"/>
+	</mffilelist>
+	<!--  ********************************  -->
+	<!--  * Source File Compile and Link *  -->
+	<!--  ********************************  -->
+	<!-- Configuration:New_Configuration -->
+	<target name="FileCompile.New_Configuration.ABC4400.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="ABC4400.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.autosetup.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="autosetup.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.centertext.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="centertext.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.constmenu.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="constmenu.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.consultantsadd.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="consultantsadd.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.consultpopup.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="consultpopup.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.consultsum.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="consultsum.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.custmaint.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="custmaint.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.custmenu.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="custmenu.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.custpopup.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="custpopup.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.dateinfo.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="dateinfo.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.errpopup.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="errpopup.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.exceptions.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="exceptions.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.gencustid.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="gencustid.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.geohashenc.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="geohashenc.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.getconsults.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="getconsults.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.getdefstore.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="getdefstore.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.getonestore.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="getonestore.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.gettimeslot.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="gettimeslot.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.mfocal.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="mfocal.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.mfocalhelp.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="mfocalhelp.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.schedread.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="schedread.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.scheduleapp.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="scheduleapp.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.setadismode.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="setadismode.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.setstore.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="setstore.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.storemaintenance.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="storemaintenance.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.storepopup.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="storepopup.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.valdate.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="valdate.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.valdated.cbl">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" srcfile="valdated.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<!--  ****************  -->
+	<!--  * Object files *  -->
+	<!--  ****************  -->
+	<!-- Default -->
+	<mffilelist id="cobol.default.object.files" srcdir="${basedir}/New_Configuration.bin" type="objfile">
+		<file name="ABC4400${objext}"/>
+		<file name="autosetup${objext}"/>
+		<file name="centertext${objext}"/>
+		<file name="constmenu${objext}"/>
+		<file name="consultantsadd${objext}"/>
+		<file name="consultpopup${objext}"/>
+		<file name="consultsum${objext}"/>
+		<file name="custmaint${objext}"/>
+		<file name="custmenu${objext}"/>
+		<file name="custpopup${objext}"/>
+		<file name="dateinfo${objext}"/>
+		<file name="errpopup${objext}"/>
+		<file name="exceptions${objext}"/>
+		<file name="gencustid${objext}"/>
+		<file name="geohashenc${objext}"/>
+		<file name="getconsults${objext}"/>
+		<file name="getdefstore${objext}"/>
+		<file name="getonestore${objext}"/>
+		<file name="gettimeslot${objext}"/>
+		<file name="mfocal${objext}"/>
+		<file name="mfocalhelp${objext}"/>
+		<file name="schedread${objext}"/>
+		<file name="scheduleapp${objext}"/>
+		<file name="setadismode${objext}"/>
+		<file name="setstore${objext}"/>
+		<file name="storemaintenance${objext}"/>
+		<file name="storepopup${objext}"/>
+		<file name="valdate${objext}"/>
+		<file name="valdated${objext}"/>
+	</mffilelist>
+	<!--  *************************  -->
+	<!--  * Configuration targets *  -->
+	<!--  *************************  -->
+	<!-- cfg.New_Configuration -->
+	<target name="cobolbuild.cfg.New_Configuration" depends="pre.build.cfg.New_Configuration,nature.specific.build.cfg.New_Configuration,post.build.cfg.New_Configuration"/>
+	<target name="nature.specific.build.cfg.New_Configuration" depends="cobol.cfg.New_Configuration"/>
+	<target name="cobol.cfg.New_Configuration" depends="cobol.compile.cfg.New_Configuration,cobol.link.cfg.New_Configuration"/>
+	<target name="New_Configuration.FileCompile">
+		<ac:for list="${filesList}" param="filename" keepgoing="true" trim="true">
+			<sequential>
+				<ac:if>
+					<not>
+						<isset property="isCancelled"/>
+					</not>
+					<then>
+						<ac:antcallback target="FileCompile.New_Configuration.@{filename}" inheritAll="true" return="isCancelled">
+						</ac:antcallback>
+					</then>
+				</ac:if>
+			</sequential>
+		</ac:for>
+	</target>
+	<target name="cobol.compile.cfg.New_Configuration">
+		<cobol debug="true" analysisDataDir="${analysisDataDir}" analysisData="${analysisData}" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" forceCompile="${forceCompile}" desttype="obj" threadedRts="true">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+			<mffilelist refid="cobol_file_set_1"/>
+		</cobol>
+	</target>
+	<target name="cobol.link.cfg.New_Configuration">
+		<cobollink debug="true" destfile="mfocalEclipse" entrypoint="mfocal" sharedRts="true" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobollinkFailOnError}" desttype="exe" threadedRts="true">
+			<mffilelist refid="cobol.default.object.files"/>
+		</cobollink>
+	</target>
+	<target name="pre.build.cfg.New_Configuration">
+	</target>
+	<target name="post.build.cfg.New_Configuration">
+	</target>
+	<target name="clean.cfg.New_Configuration">
+		<cobolclean debug="true" destdir="${basedir}/New_Configuration.bin" desttype="exe">
+			<mffilelist refid="cobol_file_set_1"/>
+		</cobolclean>
+		<cobolclean destdir="${basedir}/New_Configuration.bin" desttype="exe">
+			<mffilelist>
+				<file name="mfocalEclipse"/>
+			</mffilelist>
+		</cobolclean>
+	</target>
+	<!--  *******************  -->
+	<!--  * General targets *  -->
+	<!--  *******************  -->
+	<target name="clean">
+		<antcall target="clean.${cfgtarget}" inheritAll="true"/>
+	</target>
+	<target name="compileSource">
+		<antcall target="${cfg}.FileCompile" inheritAll="true"/>
+	</target>
+	<target name="compile" depends="compileSource">
+	</target>
+	<target name="cobolbuild">
+		<antcall target="cobolbuild.${cfgtarget}" inheritAll="true"/>
+	</target>
+</project>

@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MicroFocals/.ea
+/MicroFocals/bin/x86/Debug
+/MicroFocals/CodeCoverage
+/MicroFocals/obj/x86/Debug
+*.suo
+/MicroFocals/bin/x86/Release
+/MicroFocals/obj/x86/Release
+*.pro
+/.vs/CloudDemo/v15
+/GetOneStore/bin/Debug
+/GetOneStore/obj/Debug
+/GetOneStore/bin/Release
+/GetOneStore/obj/Release
+/.vs/CloudDemo/DesignTimeBuild
+/GetStoreInfo/Function1.cs
+/.vs/config
+/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0
+/StoreLocatorWebSite/Bin

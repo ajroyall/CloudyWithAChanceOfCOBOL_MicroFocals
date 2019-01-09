@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="cobolProject" name="MicroFocals" version="2.11">
+   <settings xsi:type="projectSettingsContainer">
+      <copybook-paths xsi:type="copybookPathsSettings">
+         <path enabled="false" name="/MicroFocals/.metadata" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.mylyn" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.mylyn/contexts" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/com.microfocus.awm.remotepreprocessor" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/com.microfocus.eclipse.project" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.history" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects/InternalTDProject" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.root" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.safetable" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.runtime" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.debug.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.e4.workbench" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.equinox.p2.ui" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.jdt.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.jdt.ui" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.m2e.logback.configuration" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.bugzilla.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.context.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.context.core/contexts" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.tasks.ui" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.cache" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/initializerMarks" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683/FP.local.files_0" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683/H.local_16" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.ui" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.team.cvs.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.ide" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.intro" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.workbench" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.core" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.ui" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/InternalTDProject" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/InternalTDProject/Enterprise_Developer" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/InternalTDProject/Enterprise_Developer/Enterprise_Development_Projects" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/Properties" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/RemoteSystemsTempFiles" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/gb" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/tests" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.vs" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/bin" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/obj" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.vs/mfocal" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/.vs/mfocal/v14" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/bin/x86" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/bin/x86/Debug" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/bin/x86/Debug/gb" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/obj/x86" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/obj/x86/Debug" type="mfpath"/>
+         <path enabled="false" name="/MicroFocals/obj/x86/Debug/mfocal.TrackingLogs" type="mfpath"/>
+      </copybook-paths>
+      <build-precedence-paths xsi:type="buildPrecedenceSettings">
+         <path enabled="true" name="/MicroFocals/.metadata" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.mylyn" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.mylyn/contexts" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/com.microfocus.awm.remotepreprocessor" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/com.microfocus.eclipse.project" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.history" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects/InternalTDProject" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.root" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.resources/.safetable" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.core.runtime" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.debug.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.e4.workbench" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.equinox.p2.ui" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.jdt.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.jdt.ui" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.m2e.logback.configuration" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.bugzilla.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.context.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.context.core/contexts" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.mylyn.tasks.ui" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.cache" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.pde.core/.p2/org.eclipse.equinox.p2.engine/profileRegistry" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/initializerMarks" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683/FP.local.files_0" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.hf-guyso-lp_1683/H.local_16" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.rse.ui" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.team.cvs.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.ide" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.intro" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.ui.workbench" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.core" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.metadata/.plugins/org.eclipse.wst.jsdt.ui" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/InternalTDProject" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/InternalTDProject/Enterprise_Developer" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/InternalTDProject/Enterprise_Developer/Enterprise_Development_Projects" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/Properties" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/RemoteSystemsTempFiles" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/gb" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/tests" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.vs" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/bin" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/obj" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.vs/mfocal" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/.vs/mfocal/v14" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/bin/x86" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/bin/x86/Debug" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/bin/x86/Debug/gb" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/obj/x86" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/obj/x86/Debug" type="mfpath"/>
+         <path enabled="true" name="/MicroFocals/obj/x86/Debug/mfocal.TrackingLogs" type="mfpath"/>
+      </build-precedence-paths>
+      <configurations default="New Configuration" xsi:type="buildConfigurationsContainer">
+         <configuration description="New Configuration" type="single_exe" is64bit="false" createlbr="false" platform="Windows" xsi:type="cobolBuildConfiguration">
+            <targetdir name="New Configuration.bin"/>
+            <application_configuration xsi:type="runtimeConfigurationSettings">
+               <cobol_switches xsi:type="projectCobolSwitches"/>
+               <rts_switches xsi:type="projectRtsSwitches"/>
+               <envvars>
+                  <envvar name="MFOCALDIR" value="..\gb"/>
+               </envvars>
+               <inheritBuildEnv>false</inheritBuildEnv>
+               <tunables>
+                  <tunable index="0" name="screen_lines" value="25"/>
+                  <tunable index="0" name="screen_cols" value="80"/>
+                  <tunable index="0" name="default_cancel_mode" value="1"/>
+                  <tunable index="0" name="program_search_order" value="4"/>
+                  <tunable index="0" name="arguments_are_initial" value="false"/>
+                  <tunable index="0" name="command_line_accept" value="false"/>
+                  <tunable index="0" name="sort_memory" value="0"/>
+                  <tunable index="0" name="dynamic_memory_limit" value="2147483647"/>
+                  <tunable index="0" name="memory_free_check_size" value="100"/>
+                  <tunable index="0" name="memory_strategy" value="1"/>
+                  <tunable index="0" name="ansi_input_mode" value="false"/>
+                  <tunable index="0" name="current_year" value="0"/>
+                  <tunable index="0" name="current_month" value="0"/>
+                  <tunable index="0" name="current_day" value="0"/>
+                  <tunable index="0" name="datewarp_dynamic" value="false"/>
+                  <tunable index="0" name="current_hour" value="-1"/>
+                  <tunable index="0" name="current_minute" value="-1"/>
+                  <tunable index="0" name="current_second" value="-1"/>
+                  <tunable index="0" name="timewarp_dynamic" value="false"/>
+               </tunables>
+            </application_configuration>
+            <link_settings xsi:type="linkSettings">
+               <additional_options value=""/>
+               <rts_bind value="false"/>
+               <custom_link_command value=""/>
+               <debug value="false"/>
+               <entry_point name="mfocal"/>
+               <error_undefined_syms value="false"/>
+               <application_type value="console"/>
+               <include_cpp value="false"/>
+               <additional_files/>
+               <rcfile path=""/>
+               <rts_type value="shared"/>
+               <target name="mfocalEclipse"/>
+               <targettype type="exe"/>
+               <threaded_rts value="true"/>
+               <verbose value="false"/>
+            </link_settings>
+         </configuration>
+      </configurations>
+      <cobol_settings xsi:type="cobolSettings">
+         <options>
+            <option name="WARNING" value="1"/>
+            <option name="DIALECT" value="MF"/>
+            <option name="CHARSET" value="ASCII"/>
+            <option id="additional" name="additional" value="use&quot;console.dir&quot;"/>
+            <option name="MAX-ERROR" value="100"/>
+            <option name="SOURCEFORMAT" value="fixed"/>
+         </options>
+         <debug value="true"/>
+         <enableCodeCoverage value="false"/>
+         <enableProfiler value="false"/>
+         <generate value="false"/>
+         <retainDirectivesFile value="false"/>
+         <genListFile value="false"/>
+         <useJvmDynamicCalls value="false"/>
+         <useJvmIncrementalBuild value="false"/>
+         <verbose value="false"/>
+      </cobol_settings>
+      <ims_settings xsi:type="additionalImsSettings">
+         <options>
+            <option id="generate_list_file" name="LIST" value="Listing/*.lst"/>
+         </options>
+         <verbose value="false"/>
+         <generatedFileDir name=""/>
+         <imsDatabaseDir name=""/>
+      </ims_settings>
+      <mfs_settings xsi:type="mfsSettings">
+         <options>
+            <option id="generate_list_file" name="LIST" value="Listing/MFS/*.lst"/>
+         </options>
+         <verbose value="false"/>
+      </mfs_settings>
+      <dbd_settings xsi:type="dbdSettings">
+         <options>
+            <option id="generate_list_file" name="LIST" value="Listing/DBD/*.lst"/>
+         </options>
+         <verbose value="false"/>
+         <cleanDbdOutputFiles value="false"/>
+      </dbd_settings>
+      <psb_settings xsi:type="psbSettings">
+         <options>
+            <option id="generate_list_file" name="LIST" value="Listing/PSB/*.lst"/>
+         </options>
+         <verbose value="false"/>
+         <cleanPsbOutputFiles value="false"/>
+      </psb_settings>
+      <bms_settings xsi:type="bmsSettings">
+         <options>
+            <option id="dsect" name="bmsSettings" value="/SYSPARM=DSECT"/>
+            <option id="decimalchar" name="bmsSettings" value="/DP=."/>
+            <option id="currencychar" name="bmsSettings" value="/CS=$"/>
+            <option id="sdf" name="bmsSettings" value="/IGNORE"/>
+            <option id="map" name="bmsSettings" value="/SYSPARM=MAP"/>
+         </options>
+      </bms_settings>
+      <dependent-projects xsi:type="dependentProjectsSettings"/>
+      <asm_settings xsi:type="assemblerCompileSettings">
+         <options>
+            <option id="compile_pre_assm_macros" name="mf370chk" value="NOMPC"/>
+            <option id="compile_mark_reentrant" name="mf370chk" value="RENT"/>
+            <option id="compile_create_optimized_code" name="mf370chk" value="NOOPT"/>
+            <option id="compile_aat_info" name="mf370chk" value="NOAAT"/>
+            <option id="compile_cross_ref_listing" name="mf370chk" value="NOXREF"/>
+            <option id="compile_create_debug_info" name="mf370chk" value="ANIM"/>
+            <option id="compile_generate_listing" name="mf370chk" value="NOLIST"/>
+         </options>
+      </asm_settings>
+      <asm_link_settings xsi:type="assemblerLinkSettings">
+         <options>
+            <option id="link_residency_mode" name="mf370lnk" value="RMODE(31)"/>
+            <option id="link_linker_output" name="mf370lnk" value="OMF(390)"/>
+            <option id="link_resolve_external" name="mf370lnk" value="CALL"/>
+            <option id="link_mark_reusable" name="mf370lnk" value="REUS"/>
+            <option id="link_generate_listing" name="mf370lnk" value="NOLIST"/>
+            <option id="link_create_debug_info" name="mf370lnk" value="ANIM"/>
+            <option id="link_mark_reentrant" name="mf370lnk" value="RENT"/>
+            <option id="link_addressing_mode" name="mf370lnk" value="AMODE(31)"/>
+         </options>
+      </asm_link_settings>
+      <asm_cics_settings enabled="false" xsi:type="assemblerCicsSettings">
+         <options>
+            <option id="cics_insert_epilog_macros" name="mf370chkCics" value="EPILOG"/>
+            <option id="cics_unsupported_option" name="mf370chkCics" value="UOPT(E)"/>
+            <option id="cics_insert_prolog_macros" name="mf370chkCics" value="PROLOG"/>
+            <option id="cics_unsupported_function" name="mf370chkCics" value="UFUNC(E)"/>
+         </options>
+      </asm_cics_settings>
+      <asm_autolink_settings enabled="true" xsi:type="assemblerAutoLinkSettings">
+         <options>
+            <option id="autolink_residency_mode" name="mf370chkAutoLink" value="RMODE(31)"/>
+            <option id="autolink_mark_reusable" name="mf370chkAutoLink" value="REUS"/>
+            <option id="autolink_resolve_external" name="mf370chkAutoLink" value="CALL"/>
+            <option id="autolink_linker_output" name="mf370chkAutoLink" value="OMF(390)"/>
+            <option id="autolink_addressing_mode" name="mf370chkAutoLink" value="AMODE(31)"/>
+         </options>
+      </asm_autolink_settings>
+      <sql_settings enabled="true" type="OpenESQL" xsi:type="sqlSettings">
+         <options>
+            <option id="OESQL.dbman" name="SQL" value="DBMAN=ODBC"/>
+         </options>
+      </sql_settings>
+      <preprocessors_settings xsi:type="preprocessorsSettings"/>
+   </settings>
+   <files xsi:type="projectFileStore">
+      <filetype type="cobol" xsi:type="cobolFileContainer">
+         <file compile="true" path="ABC4400.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="autosetup.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="centertext.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="constmenu.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="consultantsadd.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="consultpopup.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="consultsum.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="custmaint.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="custmenu.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="custpopup.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="dateinfo.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="errpopup.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="exceptions.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="gencustid.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="geohashenc.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="getconsults.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="getdefstore.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="getonestore.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="gettimeslot.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="mfocal.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="mfocalhelp.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="schedread.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="scheduleapp.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="setadismode.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="setstore.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="storemaintenance.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="storepopup.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/autosetup_test.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/custread.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/dateinfo_test.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/geohashenc_test.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/getdefstore_test.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/getonestore_test.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="tests/splitline_test.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="valdate.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="valdated.cbl" xsi:type="cobolFile"/>
+      </filetype>
+      <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
+   </files>
+</project>

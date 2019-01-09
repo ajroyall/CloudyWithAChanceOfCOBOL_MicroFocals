@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{1863D574-6070-4528-9958-C2068B3EB898}</ProjectGuid>
+    <OutputName>mfocal</OutputName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MicroFocals</RootNamespace>
+    <MFProjectType>Native</MFProjectType>
+    <MFDependencyPaths>..\</MFDependencyPaths>
+    <StartupObject>mfocal</StartupObject>
+    <SQLDirectives>
+    </SQLDirectives>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>.\bin\x86\Debug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>True</DebugSymbols>
+    <WarningLevel>2</WarningLevel>
+    <MaxError>100</MaxError>
+    <NativeLinkVerbose>True</NativeLinkVerbose>
+    <NativeLinkOutputName>mfocal</NativeLinkOutputName>
+    <AdditionalDirectives>use"console.dir"</AdditionalDirectives>
+    <KeepCodeAnalysisDataFiles>True</KeepCodeAnalysisDataFiles>
+    <RunMicroFocusCodeAnalysisAfterBuild>False</RunMicroFocusCodeAnalysisAfterBuild>
+    <ActiveRulesets>COBOL Performance;General Queries;Coding Standards;Within Entire Program</ActiveRulesets>
+    <TestCover>True</TestCover>
+    <NativeLinkEntryPoint>mfocal</NativeLinkEntryPoint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>.\bin\x86\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <DebugSymbols>False</DebugSymbols>
+    <WarningLevel>2</WarningLevel>
+    <MaxError>100</MaxError>
+    <AdditionalDirectives>use"console.dir"</AdditionalDirectives>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="autosetup.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="centertext.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="constmenu.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="consultantsadd.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="consultpopup.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="consultsum.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <None Include="custdelete.cbl" />
+    <Compile Include="custmaint.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC)</SQLDirectives>
+    </Compile>
+    <Compile Include="custmenu.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="custpopup.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="dateinfo.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="errpopup.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="gencustid.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="geohashenc.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="getconsults.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="getdefstore.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="getonestore.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="gettimeslot.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="mfocal.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(BEHAVIOR=OPTIMIZED)</SQLDirectives>
+    </Compile>
+    <Compile Include="mfocalhelp.cbl" />
+    <Compile Include="schedread.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="scheduleapp.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="setadismode.cbl" />
+    <Compile Include="ABC4400.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC)</SQLDirectives>
+    </Compile>
+    <Compile Include="storemaintenance.cbl" />
+    <Compile Include="storepopup.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="valdate.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+      <Dialect>MF</Dialect>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mfocal.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="console.dir" />
+    <None Include="gb\appoint.dat" />
+    <None Include="gb\consultants.dat" />
+    <None Include="gb\consultid.dat" />
+    <None Include="gb\custid.dat" />
+    <None Include="gb\customers.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="gb\extfh.cfg" />
+    <None Include="gb\storeconf.dat" />
+    <None Include="gb\stores.dat" />
+    <None Include="MFOCAL.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+</Project>

@@ -1,0 +1,12 @@
+#include "MFRES.H"
+#define _MFRES_INC_
+/* Micro Focus Resource File. */
+/* Version 4.00.017 */ 
+#include "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer\\include\\mfrcwin.h"
+/*MF_BITMAP*/
+/*MF_CURSOR*/
+/*MF_DIALOG*/
+/*MF_ICON*/
+MFOCAL  ICON PRELOAD MOVEABLE DISCARDABLE MFOCAL.ICO
+/*MF_MENU*/
+/*MF_RCDATA_END*/
